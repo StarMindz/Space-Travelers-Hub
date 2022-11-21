@@ -1,13 +1,12 @@
-import { profile } from 'console';
 import React from 'react';
 
-export const Profile = () => {
-  return (
-    const profile = (
+const Profile = () => {
+  const profile = (
     <div>
       Profile Section
     </div>
-    );
-    return profile;
-  )
+  );
+  return profile;
 };
+
+export default Profile

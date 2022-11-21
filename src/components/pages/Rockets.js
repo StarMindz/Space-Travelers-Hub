@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const Rockets = () => {
-  return (
-    const rocket = (
+const Rocket = () => {
+  const rocket = (
     <div>
-      Mission Section
+      Rocket Section
     </div>
-    );
-    return rocket;
-  )
+  );
+  return rocket;
 };
+
+export default Rocket;
