@@ -1,9 +1,18 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Missions = () => {
+  const missionList = useSelector((state) => state.missions);
   const mission = (
     <div>
-      Mission Section
+      {missionList.map((mission) => {
+        const missionJsx = (
+          <div className="singleBook">
+            { mission.name }
+          </div>
+        );
+        return missionJsx;
+      })}
     </div>
   );
   return mission;

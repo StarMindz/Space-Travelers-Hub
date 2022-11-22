@@ -5,7 +5,12 @@ const initialState = [];
 
 export const fetchMissions = createAsyncThunk('mission/fetchMissions', () => axios.get('https://api.spacexdata.com/v3/missions')
   .then((response) => {
-    const dataInfo = response.data;
+    const mission = response.data;
+    const dataInfo = mission.map((data) => ({
+      id: Number(data.mission_id),
+      name: data.mission_name,
+      description: data.mission_description,
+    }));
     return dataInfo;
   }));
 
