@@ -9,4 +9,4 @@ const Profile = () => {
   return profile;
 };
 
-export default Profile
+export default Profile;
