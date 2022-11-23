@@ -1,25 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger';
-import thunk from 'redux-thunk';
-import rocketReducer from './rockets/rocketSlice';
-import missionReducer from './missions/missionSlice';
+import rocketsReducer from './rockets/RocketsSlice';
+import missionsReducer from './missions/missions';
 
 const store = configureStore({
   reducer: {
-    rockets: rocketReducer,
-    missions: missionReducer,
+    rockets: rocketsReducer,
+    missions: missionsReducer,
   },
-});
-
-const preloadedState = {
-  missions: [],
-  // rockets: [],
-};
-
-const store = configureStore({
-  reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => [logger, thunk, ...getDefaultMiddleware()],
-  preloadedState,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
 });
 
 export default store;
