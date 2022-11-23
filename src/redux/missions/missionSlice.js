@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import fetchMissionsFromAPI from '../../utils/fetchMissionsFromAPI';
 
 const initialState = [];
 
@@ -23,3 +24,4 @@ const missionSlice = createSlice({
 });
 
 export default missionSlice.reducer;
+export { fetchMissions };
