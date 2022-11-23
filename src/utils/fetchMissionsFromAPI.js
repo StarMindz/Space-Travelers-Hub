@@ -7,4 +7,3 @@ const fetchMissionsFromAPI = async () => {
 };
 
 export default fetchMissionsFromAPI;
-    
