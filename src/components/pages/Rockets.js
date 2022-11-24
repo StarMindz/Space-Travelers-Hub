@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets } from '../../redux/rockets/rocketSlice';
 import { fetchMissions } from '../../redux/missions/missionSlice';
 import RocketItem from '../RocketItem';
-import './Rocket.css';
+import '../../rocketStyles/Rocket.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
