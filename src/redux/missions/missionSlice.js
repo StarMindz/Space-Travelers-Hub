@@ -1,27 +1,44 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import axios from 'axios';
-import fetchMissionsFromAPI from '../../utils/fetchMissionsFromAPI';
+import fetchMissionsFromAPI from '../../missionUtils/fetchMissionsFromAPI';
 
+const GET_MISSIONS = 'space-travelers-hub/missions/GET_MISSIONS';
 const initialState = [];
 
-export const fetchMissions = createAsyncThunk('mission/fetchMissions', () => axios.get('https://api.spacexdata.com/v3/missions')
-  .then((response) => {
-    const mission = response.data;
-    const dataInfo = mission.map((data) => ({
-      id: Number(data.mission_id),
-      name: data.mission_name,
-      description: data.mission_description,
-    }));
-    return dataInfo;
-  }));
+const fetchMissions = createAsyncThunk(
+  GET_MISSIONS,
+  async () => {
+    const response = await fetchMissionsFromAPI();
+    return response;
+  },
+);
 
-const missionSlice = createSlice({
-  name: 'mission',
+const missionsSlice = createSlice({
+  name: 'missions',
   initialState,
+  reducers: {
+    joinMission: {
+      reducer: (state, action) => state.map((mission) => (
+        mission.mission_id === action.payload ? { ...mission, reserved: true } : mission
+      )),
+      prepare: (id) => ({
+        payload: id,
+      }),
+    },
+    leaveMission: {
+      reducer: (state, action) => state.map((mission) => (
+        mission.mission_id === action.payload ? { ...mission, reserved: false } : mission
+      )),
+      prepare: (id) => ({
+        payload: id,
+      }),
+    },
+  },
   extraReducers: (builder) => {
-    builder.addCase(fetchMissions.fulfilled, (state, action) => action.payload);
+    builder.addCase(fetchMissions.fulfilled, (state, action) => (action.payload));
   },
 });
 
-export default missionSlice.reducer;
-export { fetchMissions };
+const { joinMission, leaveMission } = missionsSlice.actions;
+
+export { fetchMissions, joinMission, leaveMission };
+export default missionsSlice.reducer;
