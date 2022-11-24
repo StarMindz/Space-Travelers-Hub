@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import '../styles/MyProfile.scss';
+import '../../missionStyles/Profile.css';
 
-const MyProfile = () => {
+const Profile = () => {
   const missions = useSelector((state) => state.missions);
   const rockets = useSelector((state) => state.rockets);
   // filter missions and rockets accordingly
@@ -27,3 +27,5 @@ const MyProfile = () => {
     </div>
   );
 };
+
+export default Profile;

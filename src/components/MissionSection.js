@@ -1,4 +1,4 @@
-mport React from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 import JoinMission from './JoinMission';
 import MissionBadge from './MissionBadge';
@@ -8,11 +8,13 @@ const Missions = () => {
   return (
     <ul className="missionsData">
       {missions.map((mission) => (
-        <li key={mission.mission_id}>
+        <li className="missionRow" key={mission.mission_id}>
           <div className="missionName">{mission.mission_name}</div>
           <div className="description">{mission.description}</div>
-          <div className="status">
+          <div className="missionStatus">
             <MissionBadge reserved={!!mission.reserved} />
+          </div>
+          <div className="missionButton">
             <JoinMission reserved={!!mission.reserved} id={mission.mission_id} />
           </div>
         </li>

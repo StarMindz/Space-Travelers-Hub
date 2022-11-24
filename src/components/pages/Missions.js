@@ -1,13 +1,13 @@
 import React from 'react';
 import Missions from '../MissionSection';
-import '../missionStyles/Missions.scss';
+import '../../missionStyles/Missions.css';
 
 const MissionsPage = () => (
   <div className="missions">
-    <header>
-      <h2>Missions</h2>
-      <h2>Descriptions</h2>
-      <h2>Status</h2>
+    <header className="missionHead">
+      <h2 className="headerItem">Missions</h2>
+      <h2 className="headerItem">Descriptions</h2>
+      <h2 className="headerItem">Status</h2>
     </header>
     <Missions />
   </div>
