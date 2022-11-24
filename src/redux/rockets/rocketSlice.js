@@ -11,6 +11,7 @@ export const fetchRockets = createAsyncThunk('rocket/fetchRockets', () => axios.
       name: data.rocket_name,
       description: data.description,
       image: data.flickr_images,
+      reserved: false,
     }));
     return dataInfo;
   }));
@@ -18,9 +19,16 @@ export const fetchRockets = createAsyncThunk('rocket/fetchRockets', () => axios.
 const rocketSlice = createSlice({
   name: 'rocket',
   initialState,
+  reducers: {
+    reserveRocket: (state, action) => {
+      const rocket = state.find((rocket) => Number(rocket.id) === Number(action.payload));
+      rocket.reserved = !rocket.reserved;
+    },
+  },
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state, action) => action.payload);
   },
 });
 
 export default rocketSlice.reducer;
+export const { reserveRocket } = rocketSlice.actions;

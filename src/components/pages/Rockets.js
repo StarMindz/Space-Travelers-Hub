@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRockets } from '../../redux/rockets/rocketSlice';
 import { fetchMissions } from '../../redux/missions/missionSlice';
+import RocketItem from '../RocketItem';
+import './Rocket.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
@@ -16,9 +18,13 @@ const Rockets = () => {
     <div>
       {rocketList.map((rocket) => {
         const rocketJsx = (
-          <div className="singleBook">
-            { rocket.name }
-          </div>
+          <RocketItem
+            id={rocket.id}
+            name={rocket.name}
+            description={rocket.description}
+            image={rocket.image}
+            reserved={rocket.reserved}
+          />
         );
         return rocketJsx;
       })}
