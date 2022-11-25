@@ -1,0 +1,27 @@
+.profileSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 70px;
+}
+
+.profileColumn {
+  width: 400px;
+}
+
+.missionsList,
+.rocketsList {
+  padding: 30px;
+}
+
+.rocketItem, .missionItem {
+  border: 1px solid rgb(228, 234, 241);
+  width: 350px;
+  padding: 20px;
+}
+
+.profileHeadings {
+  margin-left: 30px;
+  font-family: 'Playfair Display', serif;
+}

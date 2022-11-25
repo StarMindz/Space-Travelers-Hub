@@ -20,11 +20,13 @@
 
 .rocketName {
   font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
 }
 
 .rocketDescription {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
+  margin-bottom: 30px;
 }
 
 .displaySpan {
@@ -40,8 +42,8 @@
 }
 
 .reserve {
-  width: 150px;
-  height: 60px;
+  width: 140px;
+  height: 50px;
   font-size: 15px;
   color: white;
   background-color: rgb(70, 113, 255);
@@ -49,8 +51,8 @@
 }
 
 .noReserve {
-  width: 200px;
-  height: 60px;
+  width: 170px;
+  height: 50px;
   font-size: 15px;
   color: rgb(99, 97, 97);
   background-color: rgb(227, 229, 235);
