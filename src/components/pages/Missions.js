@@ -1,21 +1,16 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import Missions from '../MissionSection';
+import '../../missionStyles/Missions.css';
 
-const Missions = () => {
-  const missionList = useSelector((state) => state.missions);
-  const mission = (
-    <div>
-      {missionList.map((mission) => {
-        const missionJsx = (
-          <div className="singleBook">
-            { mission.name }
-          </div>
-        );
-        return missionJsx;
-      })}
-    </div>
-  );
-  return mission;
-};
+const MissionsPage = () => (
+  <div className="missions">
+    <header className="missionHead">
+      <h2 className="headerItem">Missions</h2>
+      <h2 className="headerItem">Descriptions</h2>
+      <h2 className="headerItem">Status</h2>
+    </header>
+    <Missions />
+  </div>
+);
 
-export default Missions;
+export default MissionsPage;
