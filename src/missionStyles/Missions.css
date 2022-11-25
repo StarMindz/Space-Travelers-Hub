@@ -9,6 +9,7 @@
 }
 
 .missionHead {
+  font-size: 16px;
   display: grid;
   grid-template-columns: 15% 65% 10% 10%;
 }
@@ -29,7 +30,10 @@
   border: 1px solid rgb(216, 209, 209);
 }
 
-.missionName, .description, .missionStatus, .missionButton {
+.missionName,
+.description,
+.missionStatus,
+.missionButton {
   padding: 20px;
   padding-left: 5px;
   border: 1px solid rgb(216, 209, 209);
@@ -39,15 +43,12 @@
   font-size: 22px;
 }
 
-.missionHead {
-  font-size: 16px;
-}
-
 .description {
   font-size: 20px;
 }
 
-.missionButton, .missionStatus {
+.missionButton,
+.missionStatus {
   display: flex;
   align-items: center;
   justify-content: center;
