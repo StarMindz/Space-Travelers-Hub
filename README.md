@@ -131,7 +131,7 @@ To run tests, run the command "npm test"
 
 <!-- FUTURE FEATURES -->
 
-## 🔭 Future Features <a name="future-feature"></a>
+## 🔭 Future Features <a name="future-features"></a>
 
 Some Future Features : 
 - Make the site mobile responsive
