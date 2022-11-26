@@ -14,6 +14,7 @@
   - [Usage](#usage)
   - [Run tests](#run-tests)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -128,6 +129,16 @@ To run tests, run the command "npm test"
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-feature"></a>
+
+Some Future Features : 
+- Make the site mobile responsive
+- Add a Dragon section
+- Add more infos to the pages like the unit cost of travel, the cost of the mission,and more infos
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
