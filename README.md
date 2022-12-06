@@ -71,7 +71,7 @@
 
 >Link to live Demo 
 
-- [Coming soon]()
+- [EXPLORE TRAVEL HUB](https://spacex-travelhub.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
