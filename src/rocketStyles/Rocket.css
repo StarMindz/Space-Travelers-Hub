@@ -1,0 +1,60 @@
+
+.rocketImage {
+  width: 450px;
+}
+
+.singleRocket {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin: 30px;
+  flex-wrap: wrap;
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  width: 1000px;
+}
+
+.rocketName {
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 20px;
+}
+
+.rocketDescription {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.displaySpan {
+  padding: 3px;
+  margin: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(106, 140, 252);
+}
+
+.nodisplaySpan {
+  display: none;
+}
+
+.reserve {
+  width: 140px;
+  height: 50px;
+  font-size: 15px;
+  color: white;
+  background-color: rgb(70, 113, 255);
+  border-radius: 5px;
+}
+
+.noReserve {
+  width: 170px;
+  height: 50px;
+  font-size: 15px;
+  color: rgb(99, 97, 97);
+  background-color: rgb(227, 229, 235);
+  border-radius: 5px;
+}
